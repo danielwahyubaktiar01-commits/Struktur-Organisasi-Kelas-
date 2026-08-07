@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Struktur Organisasi Kelas XI TKJ 1</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+
+            background: linear-gradient(135deg,
+                    #0f172a,
+                    #1e3a8a,
+                    #2563eb);
+
+            color: white;
+
+            overflow-x: hidden;
+
+        }
+
+        /* ===========================
+            NAVBAR
+        ============================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 18px 8%;
+
+            background: rgba(0, 0, 0, .25);
+
+            backdrop-filter: blur(12px);
+
+            z-index: 999;
+
+        }
+
+        nav h2 {
+
+            font-size: 24px;
+
+            color: white;
+
+        }
+
+        nav ul {
+
+            display: flex;
+
+            list-style: none;
+
+            gap: 30px;
+
+        }
+
+        nav ul li a {
+
+            color: white;
+
+            text-decoration: none;
+
+            transition: .3s;
+
+            font-weight: 500;
+
+        }
+
+        nav ul li a:hover {
+
+            color: cyan;
+
+        }
+
+        /* ===========================
+            HERO
+        ============================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 20px;
+
+        }
+
+        .hero-content {
+
+            max-width: 900px;
+
+        }
+
+        .hero h1 {
+
+            font-size: 60px;
+
+            margin-bottom: 20px;
+
+            text-shadow: 0 0 20px rgba(255, 255, 255, .2);
+
+        }
+
+        .hero h2 {
+
+            font-size: 35px;
+
+            color: cyan;
+
+            margin-bottom: 20px;
+
+        }
+
+        .hero p {
+
+            line-height: 30px;
+
+            font-size: 18px;
+
+            color: #ddd;
+
+        }
+
+        .btn {
+
+            margin-top: 40px;
+
+            display: inline-block;
+
+            padding: 15px 35px;
+
+            background: cyan;
+
+            color: black;
+
+            border-radius: 40px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: .3s;
+
+        }
+
+        .btn:hover {
+
+            transform: scale(1.08);
+
+            box-shadow: 0 0 25px cyan;
+
+        }
+
+        /* ===========================
+            SECTION
+        ============================== */
+
+        section {
+
+            padding: 90px 8%;
+
+        }
+
+        .judul {
+
+            text-align: center;
+
+            font-size: 40px;
+
+            margin-bottom: 50px;
+
+            color: cyan;
+
+        }
+
+        /* ===========================
+            CARD
+        ============================== */
+
+        .container {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 30px;
+
+        }
+
+        .card {
+
+            width: 300px;
+
+            background: rgba(255, 255, 255, .12);
+
+            backdrop-filter: blur(15px);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            transition: .4s;
+
+            box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+
+        }
+
+        .card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 0 0 25px cyan;
+
+        }
+
+        .card img {
+
+            width: 100%;
+
+            height: 300px;
+
+            object-fit: cover;
+
+        }
+
+        .isi {
+
+            padding: 20px;
+
+        }
+
+        .isi h3 {
+
+            margin-bottom: 10px;
+
+            color: cyan;
+
+        }
+
+        .isi p {
+
+            margin-bottom: 8px;
+
+            color: #eee;
+
+        }
+
+        /* ===========================
+            TABLE
+        ============================== */
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            background: rgba(255, 255, 255, .1);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+        table th {
+
+            background: cyan;
+
+            color: black;
+
+            padding: 18px;
+
+        }
+
+        table td {
+
+            padding: 18px;
+
+            border: 1px solid rgba(255, 255, 255, .2);
+
+        }
+
+        /* ===========================
+            GALERI
+        ============================== */
+
+        .gallery {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 20px;
+
+        }
+
+        .gallery img {
+
+            width: 100%;
+
+            height: 220px;
+
+            border-radius: 15px;
+
+            object-fit: cover;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+        .gallery img:hover {
+
+            transform: scale(1.05);
+
+        }
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px;
+
+            background: rgba(0, 0, 0, .3);
+
+            margin-top: 80px;
+
+        }
+
+        /* ===========================
+            RESPONSIVE
+        ============================== */
+
+        @media(max-width:900px){
+
+            nav{
+
+                flex-direction:column;
+
+                gap:15px;
+
+            }
+
+            nav ul{
+
+                flex-wrap:wrap;
+
+                justify-content:center;
+
+            }
+
+            .hero h1{
+
+                font-size:40px;
+
+            }
+
+            .hero h2{
+
+                font-size:26px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===========================
+            NAVBAR
+    ============================== -->
+
+    <nav>
+
+        <h2>XI TKJ 1</h2>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#organisasi">Organisasi</a></li>
+
+            <li><a href="#jadwal">Jadwal</a></li>
+
+            <li><a href="#galeri">Galeri</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ===========================
+            HERO
+    ============================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>STRUKTUR ORGANISASI KELAS</h1>
+
+            <h2>XI TKJ 1</h2>
+
+            <p>
+
+                Website ini berisi struktur organisasi kelas,
+                jadwal piket, serta dokumentasi kegiatan kelas.
+
+                Semua data dapat diperbarui sesuai kebutuhan.
+
+            </p>
+
+            <a href="#organisasi" class="btn">
+
+                Lihat Struktur Organisasi
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================================= -->
+    <!--          BAGIAN 2 DIMULAI DARI SINI (JANGAN TUTUP HTML)   -->
+    <!-- ========================================================= -->
+<!-- ===========================
+        STRUKTUR ORGANISASI
+============================== -->
+
+<section id="organisasi">
+
+    <h2 class="judul">
+        Struktur Organisasi Kelas
+    </h2>
+
+    <div class="container">
+
+        <!-- ================================= -->
+        <!-- WALI KELAS -->
+        <!-- ================================= -->
+
+        <div class="card">
+
+            <img src="assets/wali.jpg" alt="Foto Wali Kelas">
+
+            <div class="isi">
+
+                <h3>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Wali Kelas
+                </h3>
+
+                <p>
+                    <b>Nama :</b>
+                    ###########
+                </p>
+
+                <p>
+                    <b>NIP :</b>
+                    ###########
+                </p>
+
+                <p>
+                    <b>Mata Pelajaran :</b>
+                    ###########
+                </p>
+
+                <hr style="margin:15px 0;">
+
+                <p>
+
+                    <b>Profil</b>
+
+                </p>
+
+                <p>
+
+                    #########################################
+
+                </p>
+
+                <p>
+
+                    #########################################
+
+                </p>
+
+                <p>
+
+                    #########################################
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- KETUA -->
+        <!-- ================================= -->
+
+        <div class="card">
+
+            <img src="assets/ketua.jpg" alt="Foto Ketua">
+
+            <div class="isi">
+
+                <h3>
+
+                    <i class="fas fa-user-tie"></i>
+
+                    Ketua Kelas
+
+                </h3>
+
+                <p>
+
+                    <b>Nama :</b>
+
+                    ###########
+
+                </p>
+
+                <p>
+
+                    <b>No Absen :</b>
+
+                    ###
+
+                </p>
+
+                <p>
+
+                    <b>No HP :</b>
+
+                    ###########
+
+                </p>
+
+                <hr style="margin:15px 0;">
+
+                <p>
+
+                    ##################################
+
+                </p>
+
+                <p>
+
+                    ##################################
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- WAKIL -->
+        <!-- ================================= -->
+
+        <div class="card">
+
+            <img src="assets/wakil.jpg" alt="Foto Wakil">
+
+            <div class="isi">
+
+                <h3>
+
+                    <i class="fas fa-user"></i>
+
+                    Wakil Ketua
+
+                </h3>
+
+                <p>
+
+                    <b>Nama :</b>
+
+                    ###########
+
+                </p>
+
+                <p>
+
+                    <b>No Absen :</b>
+
+                    ###
+
+                </p>
+
+                <p>
+
+                    <b>No HP :</b>
+
+                    ###########
+
+                </p>
+
+                <hr style="margin:15px 0;">
+
+                <p>
+
+                    ##################################
+
+                </p>
+
+                <p>
+
+                    ##################################
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- SEKRETARIS -->
+        <!-- ================================= -->
+
+        <div class="card">
+
+            <img src="assets/sekretaris.jpg" alt="Foto Sekretaris">
+
+            <div class="isi">
+
+                <h3>
+
+                    <i class="fas fa-pen"></i>
+
+                    Sekretaris
+
+                </h3>
+
+                <p>
+
+                    <b>Nama :</b>
+
+                    ###########
+
+                </p>
+
+                <p>
+
+                    <b>No Absen :</b>
+
+                    ###
+
+                </p>
+
+                <p>
+
+                    <b>No HP :</b>
+
+                    ###########
+
+                </p>
+
+                <hr style="margin:15px 0;">
+
+                <p>
+
+                    ##################################
+
+                </p>
+
+                <p>
+
+                    ##################################
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ================================= -->
+        <!-- BENDAHARA -->
+        <!-- ================================= -->
+
+        <div class="card">
+
+            <img src="assets/bendahara.jpg" alt="Foto Bendahara">
+
+            <div class="isi">
+
+                <h3>
+
+                    <i class="fas fa-wallet"></i>
+
+                    Bendahara
+
+                </h3>
+
+                <p>
+
+                    <b>Nama :</b>
+
+                    ###########
+
+                </p>
+
+                <p>
+
+                    <b>No Absen :</b>
+
+                    ###
+
+                </p>
+
+                <p>
+
+                    <b>No HP :</b>
+
+                    ###########
+
+                </p>
+
+                <hr style="margin:15px 0;">
+
+                <p>
+
+                    ##################################
+
+                </p>
+
+                <p>
+
+                    ##################################
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================= -->
+<!--                SECTION JADWAL PIKET                     -->
+<!-- ======================================================= -->
+
+<section id="jadwal">
+
+    <h2 class="judul">
+
+        Jadwal Piket Kelas
+
+    </h2>
+
+    <table>
+
+        <tr>
+
+            <th width="20%">Hari</th>
+
+            <th>Daftar Anggota Piket</th>
+
+        </tr>
+
+        <tr>
+
+            <td><b>Senin</b></td>
+
+            <td>
+
+                ###########<br>
+                ###########<br>
+                ###########<br>
+                ###########
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td><b>Selasa</b></td>
+
+            <td>
+
+                ###########<br>
+                ###########<br>
+                ###########<br>
+                ###########
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td><b>Rabu</b></td>
+
+            <td>
+
+                ###########<br>
+                ###########<br>
+                ###########<br>
+                ###########
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td><b>Kamis</b></td>
+
+            <td>
+
+                ###########<br>
+                ###########<br>
+                ###########<br>
+                ###########
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td><b>Jumat</b></td>
+
+            <td>
+
+                ###########<br>
+                ###########<br>
+                ###########<br>
+                ###########
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+<!-- ========================================================= -->
+<!--      BAGIAN 3 DIMULAI DARI SINI (JANGAN TUTUP HTML)       -->
+<!-- ========================================================= -->
+<!-- ======================================================= -->
+<!--                    GALERI KEGIATAN                      -->
+<!-- ======================================================= -->
+
+<section id="galeri">
+
+    <h2 class="judul">
+
+        Dokumentasi Kegiatan Kelas
+
+    </h2>
+
+    <div class="gallery">
+
+        <img src="assets/kegiatan1.jpg" alt="Kegiatan 1">
+
+        <img src="assets/kegiatan2.jpg" alt="Kegiatan 2">
+
+        <img src="assets/kegiatan3.jpg" alt="Kegiatan 3">
+
+        <img src="assets/kegiatan4.jpg" alt="Kegiatan 4">
+
+    </div>
+
+</section>
+
+<!-- ======================================================= -->
+<!--                JAM DIGITAL                              -->
+<!-- ======================================================= -->
+
+<section>
+
+    <h2 class="judul">
+
+        Waktu Saat Ini
+
+    </h2>
+
+    <center>
+
+        <h1 id="jam"></h1>
+
+        <h3 id="tanggal"></h3>
+
+    </center>
+
+</section>
+
+<!-- ======================================================= -->
+<!--                     FOOTER                              -->
+<!-- ======================================================= -->
+
+<footer>
+
+    <h2>XI TKJ 1</h2>
+
+    <br>
+
+    <p>
+
+        Website Struktur Organisasi Kelas
+
+    </p>
+
+    <br>
+
+    <p>
+
+        © 2026 XI TKJ 1
+
+    </p>
+
+</footer>
+
+<!-- ======================================================= -->
+<!--                  LIGHTBOX                               -->
+<!-- ======================================================= -->
+
+<div id="lightbox"
+style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:9999;
+">
+
+<img id="lightbox-img"
+style="
+max-width:90%;
+max-height:90%;
+border-radius:20px;
+">
+
+</div>
+
+<!-- ======================================================= -->
+<!--                  DARK MODE BUTTON                       -->
+<!-- ======================================================= -->
+
+<button id="darkBtn"
+style="
+position:fixed;
+right:20px;
+bottom:90px;
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+font-size:22px;
+cursor:pointer;
+background:cyan;
+">
+
+🌙
+
+</button>
+
+<!-- ======================================================= -->
+<!--                 BACK TO TOP                             -->
+<!-- ======================================================= -->
+
+<button id="topBtn"
+style="
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+font-size:22px;
+cursor:pointer;
+background:white;
+display:none;
+">
+
+⬆
+
+</button>
+
+<!-- ======================================================= -->
+<!--                  JAVASCRIPT                             -->
+<!-- ======================================================= -->
+
+<script>
+
+/* ==============================
+       JAM DIGITAL
+============================== */
+
+function waktu(){
+
+let sekarang=new Date();
+
+document.getElementById("jam").innerHTML=
+
+sekarang.toLocaleTimeString("id-ID");
+
+document.getElementById("tanggal").innerHTML=
+
+sekarang.toLocaleDateString("id-ID",{
+
+weekday:"long",
+
+year:"numeric",
+
+month:"long",
+
+day:"numeric"
+
+});
+
+}
+
+setInterval(waktu,1000);
+
+waktu();
+
+/* ==============================
+      BACK TO TOP
+============================== */
+
+let topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+}
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+/* ==============================
+        LIGHTBOX
+============================== */
+
+const gambar=document.querySelectorAll(".gallery img");
+
+const lightbox=document.getElementById("lightbox");
+
+const lightboxImg=document.getElementById("lightbox-img");
+
+gambar.forEach(function(img){
+
+img.onclick=function(){
+
+lightbox.style.display="flex";
+
+lightboxImg.src=this.src;
+
+}
+
+});
+
+lightbox.onclick=function(){
+
+lightbox.style.display="none";
+
+}
+
+/* ==============================
+        DARK MODE
+============================== */
+
+let dark=false;
+
+document.getElementById("darkBtn").onclick=function(){
+
+if(!dark){
+
+document.body.style.background="#111";
+
+document.body.style.color="white";
+
+this.innerHTML="☀";
+
+dark=true;
+
+}else{
+
+document.body.style.background="linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb)";
+
+this.innerHTML="🌙";
+
+dark=false;
+
+}
+
+}
+
+/* ==============================
+      ANIMASI CARD
+============================== */
+
+const card=document.querySelectorAll(".card");
+
+window.addEventListener("scroll",()=>{
+
+card.forEach((el)=>{
+
+const posisi=el.getBoundingClientRect().top;
+
+const tinggi=window.innerHeight;
+
+if(posisi<tinggi-100){
+
+el.style.opacity="1";
+
+el.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+card.forEach((el)=>{
+
+el.style.opacity="0";
+
+el.style.transform="translateY(80px)";
+
+el.style.transition="1s";
+
+});
+
+</script>
+
+</body>
+
+</html>
