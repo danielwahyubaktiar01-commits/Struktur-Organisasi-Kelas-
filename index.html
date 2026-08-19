@@ -25,7 +25,13 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+            background: linear-gradient(
+                135deg,
+                #0f172a,
+                #1e3a8a,
+                #2563eb
+            );
+
             color: white;
             overflow-x: hidden;
         }
@@ -39,12 +45,16 @@
             top: 0;
             left: 0;
             width: 100%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             padding: 18px 8%;
+
             background: rgba(0, 0, 0, .25);
             backdrop-filter: blur(12px);
+
             z-index: 999;
         }
 
@@ -70,16 +80,20 @@
             color: cyan;
         }
 
+
         /* ===========================
            HERO
         ============================== */
 
         .hero {
             min-height: 100vh;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             padding: 20px;
         }
 
@@ -90,12 +104,15 @@
         .hero h1 {
             font-size: 60px;
             margin-bottom: 20px;
-            text-shadow: 0 0 20px rgba(255, 255, 255, .2);
+
+            text-shadow:
+                0 0 20px rgba(255, 255, 255, .2);
         }
 
         .hero h2 {
             font-size: 35px;
             color: cyan;
+
             margin-bottom: 20px;
         }
 
@@ -107,20 +124,29 @@
 
         .btn {
             margin-top: 40px;
+
             display: inline-block;
+
             padding: 15px 35px;
+
             background: cyan;
             color: black;
+
             border-radius: 40px;
+
             text-decoration: none;
             font-weight: bold;
+
             transition: .3s;
         }
 
         .btn:hover {
             transform: scale(1.08);
-            box-shadow: 0 0 25px cyan;
+
+            box-shadow:
+                0 0 25px cyan;
         }
+
 
         /* ===========================
            SECTION
@@ -132,41 +158,60 @@
 
         .judul {
             text-align: center;
+
             font-size: 40px;
+
             margin-bottom: 50px;
+
             color: cyan;
         }
 
+
         /* ===========================
-           CARD
+           CARD ORGANISASI
         ============================== */
 
         .container {
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: center;
+
             gap: 30px;
         }
 
         .card {
             width: 300px;
+
             background: rgba(255, 255, 255, .12);
+
             backdrop-filter: blur(15px);
+
             border-radius: 20px;
+
             overflow: hidden;
+
             transition: .4s;
-            box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+
+            box-shadow:
+                0 0 20px rgba(0, 0, 0, .3);
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 25px cyan;
+
+            box-shadow:
+                0 0 25px cyan;
         }
 
         .card img {
             width: 100%;
             height: 300px;
+
             object-fit: cover;
+
+            display: block;
         }
 
         .isi {
@@ -174,36 +219,64 @@
         }
 
         .isi h3 {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+
             color: cyan;
         }
 
         .isi p {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+
             color: #eee;
+
+            line-height: 1.6;
         }
 
+
         /* ===========================
-           TABLE
+           TABLE JADWAL
         ============================== */
 
         table {
             width: 100%;
+
             border-collapse: collapse;
+
             background: rgba(255, 255, 255, .1);
+
             backdrop-filter: blur(10px);
+
+            overflow: hidden;
         }
 
         table th {
             background: cyan;
+
             color: black;
+
             padding: 18px;
+
+            text-align: center;
         }
 
         table td {
             padding: 18px;
+
             border: 1px solid rgba(255, 255, 255, .2);
+
+            vertical-align: top;
+
+            line-height: 1.8;
         }
+
+        table td:first-child {
+            width: 20%;
+
+            vertical-align: middle;
+
+            font-size: 17px;
+        }
+
 
         /* ===========================
            GALERI
@@ -211,44 +284,142 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+
             gap: 20px;
         }
 
         .gallery img {
             width: 100%;
             height: 220px;
+
             border-radius: 15px;
+
             object-fit: cover;
+
             cursor: pointer;
+
             transition: .3s;
         }
 
         .gallery img:hover {
             transform: scale(1.05);
+
+            box-shadow:
+                0 0 20px cyan;
         }
+
+
+        /* ===========================
+           FOOTER
+        ============================== */
 
         footer {
             text-align: center;
+
             padding: 30px;
+
             background: rgba(0, 0, 0, .3);
+
             margin-top: 80px;
         }
+
+
+        /* ===========================
+           LIGHTBOX
+        ============================== */
+
+        #lightbox {
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, .9);
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 9999;
+
+            padding: 20px;
+        }
+
+        #lightbox-img {
+            max-width: 90%;
+            max-height: 90%;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 0 30px rgba(255, 255, 255, .3);
+        }
+
+
+        /* ===========================
+           BUTTON
+        ============================== */
+
+        #darkBtn,
+        #topBtn {
+            position: fixed;
+
+            right: 20px;
+
+            width: 60px;
+            height: 60px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            z-index: 1000;
+        }
+
+        #darkBtn {
+            bottom: 90px;
+
+            background: cyan;
+        }
+
+        #topBtn {
+            bottom: 20px;
+
+            background: white;
+
+            display: none;
+        }
+
 
         /* ===========================
            RESPONSIVE
         ============================== */
 
-        @media(max-width:900px) {
+        @media(max-width: 900px) {
 
             nav {
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav ul {
                 flex-wrap: wrap;
+
                 justify-content: center;
+
+                gap: 15px;
             }
 
             .hero h1 {
@@ -259,12 +430,49 @@
                 font-size: 26px;
             }
 
+            .hero p {
+                font-size: 16px;
+            }
+
+            .judul {
+                font-size: 32px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+        }
+
+
+        @media(max-width: 600px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .card img {
+                height: 300px;
+            }
+
+            table th,
+            table td {
+                padding: 12px;
+            }
+
         }
     </style>
 
 </head>
 
+
 <body>
+
 
     <!-- ===========================
             NAVBAR
@@ -276,14 +484,26 @@
 
         <ul>
 
-            <li><a href="#home">Home</a></li>
-            <li><a href="#organisasi">Organisasi</a></li>
-            <li><a href="#jadwal">Jadwal</a></li>
-            <li><a href="#galeri">Galeri</a></li>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#organisasi">Organisasi</a>
+            </li>
+
+            <li>
+                <a href="#jadwal">Jadwal</a>
+            </li>
+
+            <li>
+                <a href="#galeri">Galeri</a>
+            </li>
 
         </ul>
 
     </nav>
+
 
 
     <!-- ===========================
@@ -294,9 +514,13 @@
 
         <div class="hero-content">
 
-            <h1>STRUKTUR ORGANISASI KELAS</h1>
+            <h1>
+                STRUKTUR ORGANISASI KELAS
+            </h1>
 
-            <h2>XI TKJ 1</h2>
+            <h2>
+                XI TKJ 1
+            </h2>
 
             <p>
                 Website ini berisi struktur organisasi kelas,
@@ -313,6 +537,7 @@
     </section>
 
 
+
     <!-- ===========================
         STRUKTUR ORGANISASI
     ============================== -->
@@ -323,29 +548,49 @@
             Struktur Organisasi Kelas
         </h2>
 
+
         <div class="container">
 
-            <!-- WALI KELAS -->
+
+            <!-- =========================
+                 WALI KELAS
+            ========================== -->
 
             <div class="card">
 
-                <img src="assets/wali.jpg" alt="Foto Wali Kelas">
+                <img
+                    src="assets/walikelas.jpg"
+                    alt="Foto Wali Kelas"
+                >
 
                 <div class="isi">
 
                     <h3>
+
                         <i class="fas fa-chalkboard-teacher"></i>
+
                         Wali Kelas
+
                     </h3>
 
+
                     <p>
+
                         <b>Nama :</b>
+
                         Yaniko
+
                     </p>
 
+
                     <p>
-                        <b>Mata Pelajaran :</b>
+
+                        <b>
+                            Mata Pelajaran :
+                        </b>
+
                         Koding Dan Kecerdasan Artifisial
+
                     </p>
 
                 </div>
@@ -353,30 +598,49 @@
             </div>
 
 
-            <!-- KETUA -->
+
+            <!-- =========================
+                 KETUA KELAS
+            ========================== -->
 
             <div class="card">
 
-                <img src="assets/ketua.jpg" alt="Foto Ketua">
+                <img
+                    src="assets/ketua.jpg"
+                    alt="Foto Ketua"
+                >
 
                 <div class="isi">
 
                     <h3>
+
                         <i class="fas fa-user-tie"></i>
+
                         Ketua Kelas
+
                     </h3>
 
+
                     <p>
+
                         <b>Nama :</b>
+
                         Jhon
+
                     </p>
 
+
                     <p>
+
                         <b>No Absen :</b>
+
                     </p>
 
+
                     <p>
+
                         <b>No HP :</b>
+
                     </p>
 
                 </div>
@@ -384,30 +648,49 @@
             </div>
 
 
-            <!-- WAKIL -->
+
+            <!-- =========================
+                 WAKIL KETUA
+            ========================== -->
 
             <div class="card">
 
-                <img src="assets/wakil.jpg" alt="Foto Wakil">
+                <img
+                    src="assets/wakil.jpg"
+                    alt="Foto Wakil"
+                >
 
                 <div class="isi">
 
                     <h3>
+
                         <i class="fas fa-user"></i>
+
                         Wakil Ketua
+
                     </h3>
 
+
                     <p>
+
                         <b>Nama :</b>
+
                         Chila
+
                     </p>
 
+
                     <p>
+
                         <b>No Absen :</b>
+
                     </p>
 
+
                     <p>
+
                         <b>No HP :</b>
+
                     </p>
 
                 </div>
@@ -415,30 +698,49 @@
             </div>
 
 
-            <!-- SEKRETARIS -->
+
+            <!-- =========================
+                 SEKRETARIS
+            ========================== -->
 
             <div class="card">
 
-                <img src="assets/sekretaris.jpg" alt="Foto Sekretaris">
+                <img
+                    src="assets/sekretaris.jpg"
+                    alt="Foto Sekretaris"
+                >
 
                 <div class="isi">
 
                     <h3>
+
                         <i class="fas fa-pen"></i>
+
                         Sekretaris
+
                     </h3>
 
+
                     <p>
+
                         <b>Nama :</b>
+
                         Ayub
+
                     </p>
 
+
                     <p>
+
                         <b>No Absen :</b>
+
                     </p>
 
+
                     <p>
+
                         <b>No HP :</b>
+
                     </p>
 
                 </div>
@@ -446,39 +748,60 @@
             </div>
 
 
-            <!-- BENDAHARA -->
+
+            <!-- =========================
+                 BENDAHARA
+            ========================== -->
 
             <div class="card">
 
-                <img src="assets/bendahara.jpg" alt="Foto Bendahara">
+                <img
+                    src="assets/bendahara.jpg"
+                    alt="Foto Bendahara"
+                >
 
                 <div class="isi">
 
                     <h3>
+
                         <i class="fas fa-wallet"></i>
+
                         Bendahara
+
                     </h3>
 
+
                     <p>
+
                         <b>Nama :</b>
+
                         Ajeng
+
                     </p>
 
+
                     <p>
+
                         <b>No Absen :</b>
+
                     </p>
 
+
                     <p>
+
                         <b>No HP :</b>
+
                     </p>
 
                 </div>
 
             </div>
+
 
         </div>
 
     </section>
+
 
 
     <!-- ===========================
@@ -488,16 +811,23 @@
     <section id="jadwal">
 
         <h2 class="judul">
+
             Jadwal Piket Kelas
+
         </h2>
+
 
         <table>
 
             <tr>
 
-                <th width="20%">Hari</th>
+                <th width="20%">
+                    Hari
+                </th>
 
-                <th>Daftar Anggota Piket</th>
+                <th>
+                    Daftar Anggota Piket
+                </th>
 
             </tr>
 
@@ -512,13 +842,27 @@
 
                 <td>
 
-                    MUHAMMAD RIDHLO MAULANA AKBAR<br>
-                    M. DEVAN ABDIKA BANGSA<br>
-                    Fabrianz Torino Putranzah<br>
-                    Ahmad Zidan Alfadly<br>
-                    Ascha Bryan Firdaus<br>
-                    Ahmad Khubaisy<br>
-                    Muhsin<br>
+                    MUHAMMAD RIDHLO MAULANA AKBAR
+                    <br>
+
+                    M. DEVAN ABDIKA BANGSA
+                    <br>
+
+                    Fabrianz Torino Putranzah
+                    <br>
+
+                    Ahmad Zidan Alfadly
+                    <br>
+
+                    Ascha Bryan Firdaus
+                    <br>
+
+                    Ahmad Khubaisy
+                    <br>
+
+                    Muhsin
+                    <br>
+
                     Juan Dzakwan Hisyam
 
                 </td>
@@ -536,12 +880,24 @@
 
                 <td>
 
-                    Silva Thalitha Dzakira<br>
-                    Fizza Fahrian Dwidama<br>
-                    Muhammad Farid Byantara Kusuma<br>
-                    Khalili Azzam Mudji Maulinda<br>
-                    Nico Putra Pramana<br>
-                    Muhammad Akbar Brilian<br>
+                    Silva Thalitha Dzakira
+                    <br>
+
+                    Fizza Fahrian Dwidama
+                    <br>
+
+                    Muhammad Farid Byantara Kusuma
+                    <br>
+
+                    Khalili Azzam Mudji Maulinda
+                    <br>
+
+                    Nico Putra Pramana
+                    <br>
+
+                    Muhammad Akbar Brilian
+                    <br>
+
                     Ahmad Sony Fahreza
 
                 </td>
@@ -559,14 +915,30 @@
 
                 <td>
 
-                    Naura Yuwani Ramandhita<br>
-                    Nadine Anindya<br>
-                    Alfian Putri<br>
-                    Amelia Fransiska<br>
-                    Dyah C<br>
-                    Reyghen Ethan Bradly Simarjuntak<br>
-                    Theodorius Adi Fatolon<br>
-                    Calya Aqila Al Mouzavie<br>
+                    Naura Yuwani Ramandhita
+                    <br>
+
+                    Nadine Anindya
+                    <br>
+
+                    Alfian Putri
+                    <br>
+
+                    Amelia Fransiska
+                    <br>
+
+                    Dyah C
+                    <br>
+
+                    Reyghen Ethan Bradly Simarjuntak
+                    <br>
+
+                    Theodorius Adi Fatolon
+                    <br>
+
+                    Calya Aqila Al Mouzavie
+                    <br>
+
                     Muhammad Yafiq Nadim Rafif
 
                 </td>
@@ -584,12 +956,24 @@
 
                 <td>
 
-                    Ayyub<br>
-                    Ajeng Ayu Siswati<br>
-                    Dhaniel Wahyu Bahtiar<br>
-                    Ken Kanzan Makhfiyan<br>
-                    Baskoro Gadang Widhyodono<br>
-                    Raditya Satrio Abimanyu<br>
+                    Ayyub
+                    <br>
+
+                    Ajeng Ayu Siswati
+                    <br>
+
+                    Dhaniel Wahyu Bahtiar
+                    <br>
+
+                    Ken Kanzan Makhfiyan
+                    <br>
+
+                    Baskoro Gadang Widhyodono
+                    <br>
+
+                    Raditya Satrio Abimanyu
+                    <br>
+
                     Fari Itha As. Sarrin
 
                 </td>
@@ -607,11 +991,21 @@
 
                 <td>
 
-                    Zidni Nuro M<br>
-                    Dwi Affandy<br>
-                    Lintang Albrian Anwar<br>
-                    Zanuar Eka Prasetya<br>
-                    Queennsha Aurellia<br>
+                    Zidni Nuro M
+                    <br>
+
+                    Dwi Affandy
+                    <br>
+
+                    Lintang Albrian Anwar
+                    <br>
+
+                    Zanuar Eka Prasetya
+                    <br>
+
+                    Queennsha Aurellia
+                    <br>
+
                     Jhon Terry Eka Ramadhani
 
                 </td>
@@ -623,6 +1017,7 @@
     </section>
 
 
+
     <!-- ===========================
             GALERI KEGIATAN
     ============================== -->
@@ -630,22 +1025,38 @@
     <section id="galeri">
 
         <h2 class="judul">
+
             Dokumentasi Kegiatan Kelas
+
         </h2>
+
 
         <div class="gallery">
 
-            <img src="assets/kegiatan1.jpg" alt="Kegiatan 1">
+            <img
+                src="assets/kegiatan1.jpg"
+                alt="Kegiatan 1"
+            >
 
-            <img src="assets/kegiatan2.jpg" alt="Kegiatan 2">
+            <img
+                src="assets/kegiatan2.jpg"
+                alt="Kegiatan 2"
+            >
 
-            <img src="assets/kegiatan3.jpg" alt="Kegiatan 3">
+            <img
+                src="assets/kegiatan3.jpg"
+                alt="Kegiatan 3"
+            >
 
-            <img src="assets/kegiatan4.jpg" alt="Kegiatan 4">
+            <img
+                src="assets/kegiatan4.jpg"
+                alt="Kegiatan 4"
+            >
 
         </div>
 
     </section>
+
 
 
     <!-- ===========================
@@ -655,8 +1066,11 @@
     <section>
 
         <h2 class="judul">
+
             Waktu Saat Ini
+
         </h2>
+
 
         <center>
 
@@ -669,13 +1083,16 @@
     </section>
 
 
+
     <!-- ===========================
             FOOTER
     ============================== -->
 
     <footer>
 
-        <h2>XI TKJ 1</h2>
+        <h2>
+            XI TKJ 1
+        </h2>
 
         <br>
 
@@ -692,79 +1109,40 @@
     </footer>
 
 
+
     <!-- ===========================
             LIGHTBOX
     ============================== -->
 
-    <div id="lightbox"
-        style="
-        display:none;
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background:rgba(0,0,0,.9);
-        justify-content:center;
-        align-items:center;
-        z-index:9999;
-        ">
+    <div id="lightbox">
 
-        <img id="lightbox-img"
-            style="
-            max-width:90%;
-            max-height:90%;
-            border-radius:20px;
-            ">
+        <img
+            id="lightbox-img"
+            alt="Preview Foto"
+        >
 
     </div>
 
 
+
     <!-- ===========================
-            DARK MODE BUTTON
+            DARK MODE
     ============================== -->
 
-    <button id="darkBtn"
-        style="
-        position:fixed;
-        right:20px;
-        bottom:90px;
-        width:60px;
-        height:60px;
-        border:none;
-        border-radius:50%;
-        font-size:22px;
-        cursor:pointer;
-        background:cyan;
-        ">
-
+    <button id="darkBtn">
         🌙
-
     </button>
+
 
 
     <!-- ===========================
             BACK TO TOP
     ============================== -->
 
-    <button id="topBtn"
-        style="
-        position:fixed;
-        right:20px;
-        bottom:20px;
-        width:60px;
-        height:60px;
-        border:none;
-        border-radius:50%;
-        font-size:22px;
-        cursor:pointer;
-        background:white;
-        display:none;
-        ">
-
+    <button id="topBtn">
         ⬆
-
     </button>
+
 
 
     <!-- ===========================
@@ -772,6 +1150,7 @@
     ============================== -->
 
     <script>
+
 
         /* ==============================
            JAM DIGITAL
@@ -781,10 +1160,14 @@
 
             let sekarang = new Date();
 
+
             document.getElementById("jam").innerHTML =
+
                 sekarang.toLocaleTimeString("id-ID");
 
+
             document.getElementById("tanggal").innerHTML =
+
                 sekarang.toLocaleDateString("id-ID", {
 
                     weekday: "long",
@@ -799,20 +1182,26 @@
 
         }
 
+
         setInterval(waktu, 1000);
 
         waktu();
+
 
 
         /* ==============================
            BACK TO TOP
         ============================== */
 
-        let topBtn = document.getElementById("topBtn");
+        let topBtn =
+            document.getElementById("topBtn");
+
 
         window.onscroll = function () {
 
-            if (document.documentElement.scrollTop > 300) {
+            if (
+                document.documentElement.scrollTop > 300
+            ) {
 
                 topBtn.style.display = "block";
 
@@ -822,7 +1211,7 @@
 
             }
 
-        }
+        };
 
 
         topBtn.onclick = function () {
@@ -835,18 +1224,24 @@
 
             });
 
-        }
+        };
+
 
 
         /* ==============================
            LIGHTBOX
         ============================== */
 
-        const gambar = document.querySelectorAll(".gallery img");
+        const gambar =
+            document.querySelectorAll(".gallery img");
 
-        const lightbox = document.getElementById("lightbox");
 
-        const lightboxImg = document.getElementById("lightbox-img");
+        const lightbox =
+            document.getElementById("lightbox");
+
+
+        const lightboxImg =
+            document.getElementById("lightbox-img");
 
 
         gambar.forEach(function (img) {
@@ -857,7 +1252,7 @@
 
                 lightboxImg.src = this.src;
 
-            }
+            };
 
         });
 
@@ -866,7 +1261,8 @@
 
             lightbox.style.display = "none";
 
-        }
+        };
+
 
 
         /* ==============================
@@ -875,70 +1271,100 @@
 
         let dark = false;
 
+
         document.getElementById("darkBtn").onclick = function () {
 
+
             if (!dark) {
+
 
                 document.body.style.background = "#111";
 
                 document.body.style.color = "white";
 
+
                 this.innerHTML = "☀";
+
 
                 dark = true;
 
+
             } else {
+
 
                 document.body.style.background =
                     "linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb)";
 
+
                 this.innerHTML = "🌙";
+
 
                 dark = false;
 
             }
 
-        }
+        };
+
 
 
         /* ==============================
            ANIMASI CARD
         ============================== */
 
-        const card = document.querySelectorAll(".card");
-
-        window.addEventListener("scroll", () => {
-
-            card.forEach((el) => {
-
-                const posisi = el.getBoundingClientRect().top;
-
-                const tinggi = window.innerHeight;
-
-                if (posisi < tinggi - 100) {
-
-                    el.style.opacity = "1";
-
-                    el.style.transform = "translateY(0px)";
-
-                }
-
-            });
-
-        });
+        const card =
+            document.querySelectorAll(".card");
 
 
         card.forEach((el) => {
 
             el.style.opacity = "0";
 
-            el.style.transform = "translateY(80px)";
+            el.style.transform =
+                "translateY(80px)";
 
-            el.style.transition = "1s";
+            el.style.transition =
+                "1s";
 
         });
 
+
+        function animasiCard() {
+
+            card.forEach((el) => {
+
+                const posisi =
+                    el.getBoundingClientRect().top;
+
+
+                const tinggi =
+                    window.innerHeight;
+
+
+                if (posisi < tinggi - 100) {
+
+                    el.style.opacity = "1";
+
+                    el.style.transform =
+                        "translateY(0px)";
+
+                }
+
+            });
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            animasiCard
+        );
+
+
+        animasiCard();
+
+
     </script>
+
 
 </body>
 
